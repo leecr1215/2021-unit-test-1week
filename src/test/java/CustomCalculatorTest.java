@@ -1,4 +1,3 @@
-
 import org.junit.Before;
 import org.junit.Test;
 
@@ -9,39 +8,36 @@ public class CustomCalculatorTest {
 
     private CustomCalculator customCalculator;
 
-    //더하기 테스트 작성
+    //더하기 테스트를 진행합니다.
     @Test
-    public void add() {
+    public void testAdd() {
         customCalculator = new CustomCalculator();
-        int result = customCalculator.add(10,15);
-        /* 이곳에 테스트 코드를 작성하세요. */
-        System.out.println("result :: " + result);
+        int result = customCalculator.add(10,10);
+        /* 테스트 코드 입력 */
+        assertTrue(result == 20);
     }
 
     //빼기 테스트 작성
     @Test
-    public void subtract() {
+    public void testSubtract() {
         customCalculator = new CustomCalculator();
-        int result = customCalculator.subtract(23,10);
-        /* 이곳에 테스트 코드를 작성하세요. */
-        System.out.println("result :: " + result);
+        int result = customCalculator.subtract(30,10);
+        assertTrue(result == 20);
     }
 
     //곱하기 테스트 작성
     @Test
-    public void multiply() {
+    public void testMultiply() {
         customCalculator = new CustomCalculator();
-        int result = customCalculator.multiply(5,9);
-        /* 이곳에 테스트 코드를 작성하세요. */
-        System.out.println("result :: " + result);
+        int result = customCalculator.multiply(2,3);
+        assertTrue(result==6);
     }
 
     //나누기 테스트 작성
     @Test
-    public void divide() {
+    public void testDivide() {
         customCalculator = new CustomCalculator();
         int result = customCalculator.divide(25,5);
-        /* 이곳에 테스트 코드를 작성하세요. */
-        System.out.println("result :: " + result);
+        assertTrue(result==5);
     }
 }
